@@ -15,7 +15,7 @@ namespace Game1.Repository
         public static List<List<string>> gameGrid = new List<List<string>>();
         public static List<string> temp;
 
-        public static void InitGrid()
+        public static void InitGrid() // sets all the values of the 3X3 grid to be " " <-- spaces
         {
             for (int row = 0; row < Game.NumberOfRows; row++)
             {
@@ -30,7 +30,8 @@ namespace Game1.Repository
 
         }
 
-        public static void SetPlayerMark(string choice, int i)
+        public static void SetPlayerMark(string choice, int i) // <---- gives user choice to pick their mark an X or O, it also checks
+                                                               // if the correct letter was entered and that the previous player hasnt picked it 
         {
             if ((choice != "X" && choice != "O") || choice == players[0].PlayerMark)
             {
@@ -41,7 +42,8 @@ namespace Game1.Repository
         }
 
 
-        public static void UpdateGrid(Player player, int row, int col)
+        public static void UpdateGrid(Player player, int row, int col)//after user says where to put the mark, this handles exceptions
+                                                                      //and sets the mark at the given row and column
         {
             if (row > 2 || col > 2)
                 throw new IndexOutOfRangeException();
@@ -55,7 +57,7 @@ namespace Game1.Repository
 
 
 
-        public static string ShowGrid()
+        public static string ShowGrid() // this is to display the 3X3 grid for ease of understanding the game.
         {
             return ($"\n" +
                     $"\t\t\t\t     Columns\n\n" +
@@ -77,7 +79,7 @@ namespace Game1.Repository
         }
 
 
-        public static bool CheckWin()
+        public static bool CheckWin()// Checks all possibilities of winning the game, Min moves to start winning: 4.
         {
             bool won;
             //checking row wise wins
@@ -144,10 +146,13 @@ namespace Game1.Repository
             return won;
         }
 
-        public static int TurnsPlayed()
+        public static int TurnsPlayed()//Just to be used in the controller class
         {
             return Game.MovesPlayed;
         }
 
-    }
+        public static int MaxTurns()
+        {
+            return Game.MAX_TURNS;
+        }
 }

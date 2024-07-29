@@ -11,6 +11,8 @@ namespace Game1.Models
         public static int NumberOfRows { get; } = 3;
         public static int NumberOfColumns { get; } = 3;
 
+        public static int MAX_TURNS { get; } = 9;
+
         public static int MovesPlayed { set; get; } = 1;
     }
 }

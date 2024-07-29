@@ -23,10 +23,11 @@ namespace Game1.View_Controller
 
         }
 
-        static void GameLoop()
+        static void GameLoop()// Contains the main try and except which catches exceptions without incrementing turn
+
         {
             Player currentPlayer = GameManager.players[0];
-            while (GameManager.TurnsPlayed() <= 9)
+            while (GameManager.TurnsPlayed() <= GameManager.MaxTurns())
             {
                 try
                 {
@@ -44,6 +45,7 @@ namespace Game1.View_Controller
                     currentPlayer = (currentPlayer == GameManager.players[0]) ?
                         GameManager.players[1] : GameManager.players[0];
                     Game.MovesPlayed++;
+
                 }
                 catch (Exception ex)
                 {
@@ -84,17 +86,17 @@ namespace Game1.View_Controller
 
         static void PlayerMark()
         {
-            for (int i = 1; i <= 2; i++)
+            for (int playerNumber = 1; playerNumber <= 2; playerNumber++)
             {
-                Console.Write($"Player {i} choose your mark (X or O): ");
+                Console.Write($"Player {playerNumber} choose your mark (X or O): ");
                 try
                 {
                     string choice = Console.ReadLine().ToUpper();
-                    GameManager.SetPlayerMark(choice, i);
+                    GameManager.SetPlayerMark(choice, playerNumber);
                 }
                 catch (Exception e)
                 {
-                    i -= 1;
+                    playerNumber -= 1;// this is done to not increment the player in case of an exception
                     Console.WriteLine(e.Message);
                 }
             }
