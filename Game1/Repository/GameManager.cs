@@ -119,7 +119,7 @@ namespace Game1.Repository
                     return won;
                 }
             }
-            //check diagnol "/" win
+            //check diagnol "\" win
             won = true;
             for (int i = 0; i < Game.NumberOfColumns - 1; i++)
             {
@@ -130,8 +130,11 @@ namespace Game1.Repository
                 else
                     won &= false;
             }
-
-            // check diagnol "\" win
+            if (won)
+            {
+                return won;
+            }
+            // check diagnol "/" win
             won = true;
             for (int i = 0; i < Game.NumberOfColumns - 1; i++)
             {
@@ -155,4 +158,5 @@ namespace Game1.Repository
         {
             return Game.MAX_TURNS;
         }
+    }
 }

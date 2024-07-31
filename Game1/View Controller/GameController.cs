@@ -32,6 +32,7 @@ namespace Game1.View_Controller
                 try
                 {
 
+                    int a = Game.MovesPlayed;
                     UpdateGame(currentPlayer);
                     ShowGame();
                     won = GameManager.CheckWin();
