@@ -12,11 +12,12 @@ namespace Game1.Repository
     internal static class GameManager
     {
         public static List<Player> players = new List<Player> { new Player(1), new Player(2) };
-        public static List<List<string>> gameGrid = new List<List<string>>();
+        public static List<List<string>> gameGrid;
         public static List<string> temp;
 
         public static void InitGrid() // sets all the values of the 3X3 grid to be " " <-- spaces
         {
+            gameGrid = new List<List<string>>();
             for (int row = 0; row < Game.NumberOfRows; row++)
             {
                 temp = new List<string>();

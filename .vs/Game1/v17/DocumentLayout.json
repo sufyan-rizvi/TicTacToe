@@ -38,7 +38,8 @@
               "RelativeToolTip": "Game1\\Models\\Game.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T17:22:07.3Z"
+              "WhenOpened": "2024-07-29T17:22:07.3Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,7 +49,7 @@
               "RelativeDocumentMoniker": "Game1\\View Controller\\GameController.cs",
               "ToolTip": "C:\\Users\\DELL\\Desktop\\Sufyan\\AproSCM\\Game1\\Game1\\View Controller\\GameController.cs",
               "RelativeToolTip": "Game1\\View Controller\\GameController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwCUAAAAUAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAawGcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T17:18:23.234Z",
               "EditorCaption": ""
@@ -59,9 +60,9 @@
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Sufyan\\AproSCM\\Game1\\Game1\\Repository\\GameManager.cs",
               "RelativeDocumentMoniker": "Game1\\Repository\\GameManager.cs",
-              "ToolTip": "C:\\Users\\DELL\\Desktop\\Sufyan\\AproSCM\\Game1\\Game1\\Repository\\GameManager.cs*",
-              "RelativeToolTip": "Game1\\Repository\\GameManager.cs*",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAwIcAAAANAAAA",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Sufyan\\AproSCM\\Game1\\Game1\\Repository\\GameManager.cs",
+              "RelativeToolTip": "Game1\\Repository\\GameManager.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAawBMAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T17:12:36.142Z",
               "EditorCaption": ""

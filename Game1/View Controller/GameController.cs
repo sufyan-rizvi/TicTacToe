@@ -14,18 +14,37 @@ namespace Game1.View_Controller
         static bool won;
         public static void PlayGame()
         {
+            bool continueGame = true;
             Console.WriteLine("Game created by: Mohammed Sufyan Rizvi !");
 
             PlayerMark();
-            InitGrid();
-            ShowGame();
-            GameLoop();
+            int num = 0;
+            while (continueGame)
+            {
+                num = num + 1;
+                GameLoop();
+                Console.WriteLine("Do you wish to continue, Y/N? ");
+                switch (Console.ReadLine().ToLower())
+                {
+                    case "y":
+                        continueGame = true;
+                        break;
+                    case "n":
+                        continueGame= false;
+                        break;
+                    default:
+                        Console.WriteLine("Enter a Valid Choice !");
+                        break;
+                }
+                    
+            }
 
         }
 
         static void GameLoop()// Contains the main try and except which catches exceptions without incrementing turn
-
         {
+            InitGrid();
+            ShowGame();
             Player currentPlayer = GameManager.players[0];
             while (GameManager.TurnsPlayed() <= GameManager.MaxTurns())
             {
